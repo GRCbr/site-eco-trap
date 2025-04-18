@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Armadilha ética e sustentável para controle de javalis. Proteja suas lavouras com uma solução viável e segura.">
+    <meta name="keywords" content="javali, controle de javalis, armadilha ética, agricultura sustentável, proteção de lavouras">
+    <title>EcoTrap Javali - Inovação para Controle de Javalis</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c6e49;
+            --secondary-color: #4c956c;
+            --accent-color: #d68c45;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --forest-brown: #8B4513;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-link {
+            color: var(--dark-color);
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img10.png');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;   
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .center-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            background-color: white;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .benefit-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateX(10px);
+        }
+
+        .benefit-title {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        .about-img {
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-padding {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EcoTrap Javali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beneficios">Benefícios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <h1> Inovação para o Controle de Javalis </h1>
+                    <h3 class="mb-4">Proteja suas lavouras e o ambiente com uma solução viável e segura</h3>
+                    <a href="#sobre" class="btn btn-primary btn-lg me-3">Saiba Mais</a>
+                    <a href="#contato" class="btn btn-outline-light btn-lg">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">Sobre Nossa Solução</h2>
+                    <p class="mb-4">Os javalis são considerados uma das espécies invasoras mais prejudiciais ao redor do mundo, causando danos significativos à agricultura, biodiversidade nativa e infraestrutura rural. No Brasil, estes animais causam prejuízos estimados em milhões por ano.</p>
+                    <p class="mb-4">Nossa armadilha representa uma solução inovadora para este problema crescente. Desenvolvida após extensiva pesquisa e testes, oferecemos um método de captura que prioriza o bem-estar animal enquanto proporciona controle efetivo da população de javalis.</p>
+                    <p>Diferente de métodos tradicionais que podem ser cruéis ou ineficientes, nossa tecnologia garante uma captura segura, minimizando o estresse para o animal e maximizando a eficácia para o produtor rural.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img2.jpg" alt="Armadilha ética para javalis" class="img-fluid about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="funcionalidades" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center center-title mb-5">Como Funciona</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Preparação e Instalação</h4>
+                        <p>Fácil de montar e instalar, nossa armadilha vem com instruções detalhadas e requer ferramentas mínimas para configuração em áreas estratégicas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Mecanismo de Captura</h4>
+                        <p>Sistema seguro acionado pelo próprio animal, garantindo captura eficiente sem machucá-lo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h4>Interação com Javalis</h4>
+                        <p>Projetada para atrair javalis de forma natural utilizando iscas específicas e minimizando o impacto sobre outras espécies.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Retirada e Realocação</h4>
+                        <p>Após a captura, o animal pode ser removido e realocado com segurança, seguindo os protocolos ambientais estabelecidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center center-title mb-5">Benefícios</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4 text-center">Econômicos</h3>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Redução de Prejuízos</h5>
+                        <p>Minimiza perdas em lavouras e pastagens, com potencial de economizar bilhões globalmente em danos agrícolas.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Custo-Benefício</h5>
+                        <p>Solução de baixo custo comparada a métodos tradicionais, com alta durabilidade e reutilização.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Produtividade Agrícola</h5>
+                        <p>Aumenta a produtividade ao proteger cultivos e infraestrutura rural de forma eficiente.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4 text-center">Ambientais</h3>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Preservação da Biodiversidade</h5>
+                        <p>Reduz a pressão sobre espécies nativas que competem com javalis por recursos naturais.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Proteção do Solo</h5>
+                        <p>Previne a degradação do solo causada pelo comportamento de escavação dos javalis.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Qualidade da Água</h5>
+                        <p>Diminui riscos de contaminação hídrica associados à presença excessiva de javalis em áreas sensíveis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4 text-center">Sociais e Éticos</h3>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Tratamento Humanitário</h5>
+                        <p>Método que não fere nem estressa excessivamente os animais durante a captura.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Segurança Rural</h5>
+                        <p>Contribui para a segurança de comunidades rurais, reduzindo encontros potencialmente perigosos com javalis.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5 class="benefit-title">Facilidade de Uso</h5>
+                        <p>Pode ser implementada por agricultores ou gestores ambientais sem necessidade de treinamento especializado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title text-center center-title mb-5">Entre em Contato</h2>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Seu E-mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <a href="mailto:grc.aph@gmail.com" class="btn btn-primary btn-lg">Entre em Contato</a>
+                            </div>
+                        </form>
+                        <div class="mt-4 text-center">
+                            <p>Entre em contato para saber mais ou implementar essa solução inovadora em sua propriedade. Estamos prontos para ajudar!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3>EcoTrap Javali</h3>
+                    <p>Soluções éticas e eficientes para o controle de javalis.</p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="background-color: rgba(255,255,255,0.2);">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 EcoTrap Javali. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close navbar if open (on mobile)
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            });
+        });
+        
+        // Form validation and submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // You could add more validation here
+            
+            // Normally this would submit to a server, but for this example we'll just redirect to email
+            window.location.href = `mailto:grc.aph@gmail.com?subject=Contato de ${name}&body=${message}%0D%0A%0D%0AEmail para resposta: ${email}`;
+        });
+    </script>
+</body>
+</html>
